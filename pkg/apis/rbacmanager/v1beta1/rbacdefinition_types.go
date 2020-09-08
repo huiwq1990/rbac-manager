@@ -24,7 +24,7 @@ import (
 // Subject is an expansion on the rbacv1.Subject to allow definition of ImagePullSecrets for a Service Account
 type Subject struct {
 	rbacv1.Subject
-	ImagePullSecrets []string `json:"imagePullSecrets"`
+	ImagePullSecrets []string `json:"imagePullSecrets,omitempty"`
 }
 
 // RBACBinding is a specification for a RBACBinding resource
